@@ -13,6 +13,7 @@ Projeto de mensagería construído durante curso de fundamento de mensagería co
 
 ## Tecnologia
 Esse projeto está sendo desenvolvido em Java;
+
 Docker foi utilizado para subir um servidor rodando RabbitMQ;
 
 ## Autor
