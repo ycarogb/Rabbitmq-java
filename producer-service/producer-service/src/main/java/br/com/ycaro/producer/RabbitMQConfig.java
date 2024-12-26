@@ -11,18 +11,18 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitMQConfig {
 
-    public static final String EXG_NAME_MARKETPLACE = "marketplace.direct"; //nome da exchange
+    public static final String EXG_NAME_MARKETPLACE = "test.direct"; //nome da exchange
     public static final String QUEUE_PRODUCT_LOG = "product.log"; //nome da fila
     public static final String RK_PRODUCT_LOG = "product.log"; //nome da routing key
 
     @Bean //sempre que subir a aplicação vai chamar esse método
     public Queue queue(){
-        return new Queue(QUEUE_PRODUCT_LOG, false, false, false);
+        return new Queue(QUEUE_PRODUCT_LOG, true, false, false);
     }
 
     @Bean
     public DirectExchange directExchange(){
-        return new DirectExchange(EXG_NAME_MARKETPLACE, false, false);
+        return new DirectExchange(EXG_NAME_MARKETPLACE, true, false);
     }
 
     @Bean
